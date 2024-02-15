@@ -1,5 +1,5 @@
 # Colocamos la versión de node que tengo instalada
-FROM node:18
+FROM node:16
 
 # WORKDIR: Establece el directorio de trabajo dentro del contenedor como /app
 # todo lo que se copie en la imagen de docker se almacenará en este directorio
