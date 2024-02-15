@@ -12,8 +12,6 @@ jobs:
     steps:
     - name: Checkout del código
       uses: actions/checkout@v2
-      with:
-        path: TestDevopsMusicApp
 
     - name: Instalar Node.js 18
       uses: actions/setup-node@v2
@@ -34,8 +32,6 @@ jobs:
     steps:
     - name: Checkout del código
       uses: actions/checkout@v2
-      with:
-        path: TestDevopsMusicApp
 
     - name: Instalar Node.js 18
       uses: actions/setup-node@v2
@@ -43,10 +39,10 @@ jobs:
         node-version: 18
 
     - name: Instalar dependencias
-      run: cd ${{ github.workspace }}/ && npm install
+      run: cd ${{ github.workspace }}/frontend && npm install
 
     - name: Ejecutar pruebas con Cypress
-      run: cd ${{ github.workspace }}/ && npx cypress run
+      run: cd ${{ github.workspace }}/frontend && npx cypress run
 
     - name: Construir Docker
       run: |
