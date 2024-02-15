@@ -23,7 +23,7 @@ jobs:
 
     - name: Construir Docker
       run: |
-        docker build -t img-backend:${{ github.sha }} -f backend/Dockerfile ${{ github.workspace }}/backend
+        docker build -t img-backend:${{ github.sha }} -f${{ github.workspace }}/backend/Dockerfile ${{ github.workspace }}/backend
         docker push img-backend:${{ github.sha }}
 
   build-frontend:
@@ -46,5 +46,5 @@ jobs:
 
     - name: Construir Docker
       run: |
-        docker build -t img-frontend:${{ github.sha }} -f frontend/Dockerfile ${{ github.workspace }}/frontend
+        docker build -t img-frontend:${{ github.sha }} -f ${{ github.workspace }}/frontend/Dockerfile ${{ github.workspace }}/frontend
         docker push img-frontend:${{ github.sha }}
