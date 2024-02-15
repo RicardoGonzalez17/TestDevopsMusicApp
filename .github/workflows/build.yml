@@ -13,7 +13,7 @@ jobs:
     - name: Checkout del código
       uses: actions/checkout@v2
       with:
-        path: backend
+        path: TestDevopsMusicApp
 
     - name: Instalar Node.js 18
       uses: actions/setup-node@v2
@@ -35,7 +35,7 @@ jobs:
     - name: Checkout del código
       uses: actions/checkout@v2
       with:
-        path: frontend
+        path: TestDevopsMusicApp
 
     - name: Instalar Node.js 18
       uses: actions/setup-node@v2
