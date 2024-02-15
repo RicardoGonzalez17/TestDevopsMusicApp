@@ -21,7 +21,7 @@ jobs:
         node-version: 18
 
     - name: Instalar dependencias
-      run: cd ${{ github.workspace }} backend && npm install
+      run: cd ${{ github.workspace }}/backend && npm install
 
     - name: Construir Docker
       run: |
@@ -43,10 +43,10 @@ jobs:
         node-version: 18
 
     - name: Instalar dependencias
-      run: cd ${{ github.workspace }} && npm install
+      run: cd ${{ github.workspace }}/ && npm install
 
     - name: Ejecutar pruebas con Cypress
-      run: cd ${{ github.workspace }} && npx cypress run
+      run: cd ${{ github.workspace }}/ && npx cypress run
 
     - name: Construir Docker
       run: |
