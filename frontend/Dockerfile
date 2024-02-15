@@ -1,5 +1,5 @@
 # Use an official Node runtime as the base image
-FROM node:16-windowsservercore-ltsc2019
+FROM node:latest
 
 # Set the working directory
 WORKDIR /app/frontend
