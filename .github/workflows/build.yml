@@ -13,10 +13,10 @@ jobs:
     - name: Checkout del código
       uses: actions/checkout@v2
 
-    - name: Instalar Node.js 18
+    - name: Instalar Node.js 16
       uses: actions/setup-node@v2
       with:
-        node-version: 18
+        node-version: 16
 
     - name: Instalar dependencias
       run: cd ${{ github.workspace }}/backend && npm install
@@ -33,10 +33,10 @@ jobs:
     - name: Checkout del código
       uses: actions/checkout@v2
 
-    - name: Instalar Node.js 18
+    - name: Instalar Node.js 16
       uses: actions/setup-node@v2
       with:
-        node-version: 18
+        node-version: 16
 
     - name: Instalar dependencias
       run: cd ${{ github.workspace }}/frontend && npm install
